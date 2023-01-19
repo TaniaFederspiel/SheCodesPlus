@@ -1,47 +1,56 @@
-let actualDate = new Date();
-let today = document.querySelector("div.date");
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[actualDate.getDay()];
-let date = actualDate.getDate();
-let months = [
-  "01",
-  "02",
-  "03",
-  "04",
-  "05",
-  "06",
-  "07",
-  "08",
-  "09",
-  "10",
-  "11",
-  "12",
-];
-let month = months[actualDate.getMonth()];
-let year = actualDate.getFullYear();
-let hour = actualDate.getHours();
-let minute = actualDate.getMinutes();
-if (minute < 10) {
-  minute = "0" + minute;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let calendarDate = date.getDate();
+  let months = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  if (minute < 10) {
+    minute = "0" + minute;
+  }
+  return `${day}, ${calendarDate}.${month}.${year} / ${hour}:${minute}`;
 }
-
-today.innerHTML = `${day}, ${date}.${month}.${year} / ${hour}:${minute}`;
 
 function showCurrentWeather(response) {
   document.querySelector(".place").innerHTML = response.data.name;
   document.querySelector(".degree").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector(".weather").innerHTML = response.data.weather[0].main;
+  document.querySelector(".weather").innerHTML =
+    response.data.weather[0].description;
+
+  let dateElement = document.querySelector(".date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {

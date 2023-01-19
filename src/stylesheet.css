@@ -40,18 +40,22 @@ img {
   text-align: left;
 }
 
-.date {
+.update {
   font-size: 16px;
   text-align: left;
-  text-decoration: none;
+}
+.date {
+  font-size: 16px;
   text-align: left;
 }
 
 .weather {
   font-size: 16px;
   text-align: left;
-  text-decoration: none;
-  text-align: left;
+}
+
+.weather::first-letter {
+  text-transform: capitalize;
 }
 
 .actualweather {
@@ -70,7 +74,7 @@ img {
   font-size: 16px;
   text-decoration: none;
   position: relative;
-  left: -240px;
+  left: -220px;
   top: 15px;
 }
 
@@ -78,7 +82,7 @@ img {
   font-size: 16px;
   text-decoration: none;
   position: relative;
-  left: -380px;
+  left: -360px;
   top: 15px;
 }
 
