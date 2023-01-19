@@ -16,65 +16,66 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1>
-        <img src="images/swissflag.jpg" alt="" width="100" /> Swiss Weather
-        Institute
-      </h1>
+    <div class="weather-app">
+      <div class="container">
+        <h1>
+          <img src="images/swissflag.jpg" alt="" width="100" /> Swiss Weather
+          Institute
+        </h1>
 
-      <form id="search-form">
-        <div class="row">
-          <div class="col-8">
-            <input
-              type="text"
-              placeholder="Enter your City"
-              autocomplete="off"
-              autofocus="on"
-              id="text-input"
-              class="form-control"
-            />
+        <form id="search-form">
+          <div class="row">
+            <div class="col-8">
+              <input
+                type="text"
+                placeholder="Enter your City"
+                autocomplete="off"
+                autofocus="on"
+                id="text-input"
+                class="form-control"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary"
+                id="search-button"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Current"
+                class="form-control btn btn-info"
+                id="current-location"
+              />
+            </div>
           </div>
-          <div class="col-2">
-            <input
-              type="submit"
-              value="Search"
-              class="form-control btn btn-primary"
-            />
-          </div>
-          <div class="col-2">
-            <input
-              type="submit"
-              value="Current"
-              class="form-control btn btn-info"
-              id="current-location"
-            />
-          </div>
-        </div>
-      </form>
+        </form>
 
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <div class="place">Zurich<br /></div>
-            <div class="date">Friday, 23.12.22 / 14:00</div>
-            <div class="weather">Partly Sunny</div>
-          </div>
-          <div class="col"><div class="actualweather">🌥️</div></div>
-          <div class="col">
-            <div class="degree">7</div>
-          </div>
-          <div class="col">
-            <a href="#" id="celsius-link">C°</a>
-          </div>
-          <div class="col">
-            <a href="#" id="fahrenheit-link">F°</a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div class="place">Zurich<br /></div>
+              <div class="date">Friday, 23.12.22 / 14:00</div>
+              <div class="weather">Partly Sunny</div>
+            </div>
+            <div class="col"><div class="actualweather">🌥️</div></div>
+            <div class="col">
+              <div class="degree">7</div>
+            </div>
+            <div class="col">
+              <a href="#" id="celsius-link">C° |</a>
+            </div>
+            <div class="col">
+              <a href="#" id="fahrenheit-link">F°</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="preview">
-      <div class="container text-center">
+      <div class="container text-center" id="forecast">
         <div class="row row-cols-3">
           <div class="col-2">Sat</div>
           <div class="col-2">Sun</div>
@@ -96,13 +97,15 @@
           <div class="col-2">8°</div>
         </div>
       </div>
+      <p class="footer">
+        <a
+          href="https://github.com/TaniaFederspiel/SheCodesPlus"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Tania Federspiel
+      </p>
     </div>
-    <p class="footer">
-      <a href="https://github.com/TaniaFederspiel/SheCodesPlus" target="_blank"
-        >Open-source code</a
-      >
-      by Tania Federspiel
-    </p>
     <script src="src/index.js"></script>
   </body>
 </html>

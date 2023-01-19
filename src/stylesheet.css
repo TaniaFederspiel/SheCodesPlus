@@ -1,14 +1,37 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e7eaf6;
+  background-color: #e7f7f7;
+  color: #24527a;
 }
+
 h1 {
   font-size: 34px;
   margin: 30px 0px 30px 0px;
 }
 
+img {
+  border-radius: 15px;
+}
+
+.weather-app {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #8ab8e0;
+  border-radius: 15px;
+}
 .form-control {
   margin-bottom: 80px;
+}
+
+#search-button {
+  background: #24527a;
+  border: #24527a;
+}
+
+#current-location {
+  background: #a7bcb9;
+  border: #a7bcb9;
 }
 
 .place {
@@ -34,20 +57,20 @@ h1 {
 .actualweather {
   font-size: 50px;
   position: relative;
-  left: -100px;
+  left: -5px;
 }
 .degree {
   font-size: 50px;
   font-weight: 600;
   position: relative;
-  left: -260px;
+  left: -100px;
 }
 
 #celsius-link {
   font-size: 16px;
   text-decoration: none;
   position: relative;
-  left: -480px;
+  left: -240px;
   top: 15px;
 }
 
@@ -55,11 +78,11 @@ h1 {
   font-size: 16px;
   text-decoration: none;
   position: relative;
-  left: -710px;
+  left: -380px;
   top: 15px;
 }
 
-.preview {
+#forecast {
   font-size: 16px;
   font-weight: 700;
   margin-top: 80px;
@@ -67,7 +90,6 @@ h1 {
 
 .footer {
   font-size: 12px;
-  position: relative;
-  right: -120px;
-  padding-top: 30px;
+  padding-top: 25px;
+  margin: 0;
 }
