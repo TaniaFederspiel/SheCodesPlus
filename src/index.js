@@ -42,7 +42,6 @@ function showCurrentWeather(response) {
   );
   document.querySelector(".weather").innerHTML =
     response.data.weather[0].description;
-
   let dateElement = document.querySelector(".date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
@@ -51,6 +50,7 @@ function showCurrentWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -84,7 +84,32 @@ function getLocation(event) {
   navigator.geolocation.getCurrentPosition(localWeather);
 }
 
+function changeCelsius(event) {
+  event.preventDefault;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector(".degree");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+function changeFahrenheit(event) {
+  event.preventDefault;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector(".degree");
+  let fahrenheitConverter = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitConverter);
+}
+
+let celsiusTemperature = null;
+
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getLocation);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", changeCelsius);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", changeFahrenheit);
 
 search("Zurich");

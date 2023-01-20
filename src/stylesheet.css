@@ -1,6 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e7f7f7;
+  background-color: #f6ffff;
   color: #24527a;
 }
 
@@ -20,6 +20,7 @@ img {
   border: 1px solid #8ab8e0;
   border-radius: 15px;
 }
+
 .form-control {
   margin-bottom: 80px;
 }
@@ -84,6 +85,15 @@ img {
   position: relative;
   left: -360px;
   top: 15px;
+}
+
+.active {
+  color: #24527a;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 #forecast {
