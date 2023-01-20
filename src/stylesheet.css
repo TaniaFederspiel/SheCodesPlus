@@ -13,6 +13,11 @@ img {
   border-radius: 15px;
 }
 
+li {
+  list-style: none;
+  text-align: left;
+}
+
 .weather-app {
   max-width: 900px;
   margin: 30px auto;
@@ -62,20 +67,20 @@ img {
 .actualweather {
   font-size: 50px;
   position: relative;
-  left: -5px;
+  left: -10px;
 }
 .degree {
   font-size: 50px;
   font-weight: 600;
   position: relative;
-  left: -100px;
+  left: -40px;
 }
 
 #celsius-link {
   font-size: 16px;
   text-decoration: none;
   position: relative;
-  left: -220px;
+  left: -50px;
   top: 15px;
 }
 
@@ -83,7 +88,7 @@ img {
   font-size: 16px;
   text-decoration: none;
   position: relative;
-  left: -360px;
+  left: -90px;
   top: 15px;
 }
 

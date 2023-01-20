@@ -51,6 +51,10 @@ function showCurrentWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#speed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function search(city) {
