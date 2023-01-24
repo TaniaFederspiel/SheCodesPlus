@@ -1,20 +1,22 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #24527a;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgba(216, 241, 230, 0.46) 0.1%,
-    rgba(233, 226, 226, 0.28) 90.1%
-  );
+  background-color: #e0ebeb;
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 30px;
   margin: 30px 0px 30px 0px;
 }
 
 img {
   border-radius: 15px;
+}
+
+ul {
+  position: relative;
+  left: -30px;
+  top: 5px;
 }
 
 li {
@@ -28,7 +30,8 @@ li {
   padding: 20px;
   border: 1px solid #8ab8e0;
   border-radius: 15px;
-  background-color: #f0f7f7;
+  box-shadow: 0 30px 50px #c7d7e6;
+  background-color: #f9fbfb;
 }
 
 .form-control {
@@ -78,12 +81,14 @@ li {
   font-size: 50px;
   font-weight: 600;
   position: relative;
-  left: -40px;
+  left: -55px;
+  top: -10px;
 }
 
 .celsius {
   position: relative;
-  left: -60px;
+  left: -55px;
+  top: 7px;
 }
 
 .weather-forecast {
@@ -96,7 +101,8 @@ li {
 }
 
 .forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bolder;
 }
 
 .temp-min {
