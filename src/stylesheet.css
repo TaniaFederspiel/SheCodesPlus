@@ -1,7 +1,11 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f6ffff;
   color: #24527a;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(216, 241, 230, 0.46) 0.1%,
+    rgba(233, 226, 226, 0.28) 90.1%
+  );
 }
 
 h1 {
@@ -24,6 +28,7 @@ li {
   padding: 20px;
   border: 1px solid #8ab8e0;
   border-radius: 15px;
+  background-color: #f0f7f7;
 }
 
 .form-control {
@@ -76,29 +81,9 @@ li {
   left: -40px;
 }
 
-#celsius-link {
-  font-size: 16px;
-  text-decoration: none;
+.celsius {
   position: relative;
-  left: -50px;
-  top: 15px;
-}
-
-#fahrenheit-link {
-  font-size: 16px;
-  text-decoration: none;
-  position: relative;
-  left: -90px;
-  top: 15px;
-}
-
-.active {
-  color: #24527a;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
+  left: -60px;
 }
 
 .weather-forecast {
@@ -120,6 +105,6 @@ li {
 
 .footer {
   font-size: 12px;
-  padding-top: 25px;
-  margin: 0;
+  position: relative;
+  right: -200px;
 }

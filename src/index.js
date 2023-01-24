@@ -77,10 +77,8 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "ce144f0cf51fa43f03431f0488a36728";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -139,32 +137,7 @@ function getLocation(event) {
   navigator.geolocation.getCurrentPosition(localWeather);
 }
 
-function changeCelsius(event) {
-  event.preventDefault;
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector(".degree");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function changeFahrenheit(event) {
-  event.preventDefault;
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector(".degree");
-  let fahrenheitConverter = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitConverter);
-}
-
-let celsiusTemperature = null;
-
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getLocation);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", changeCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", changeFahrenheit);
 
 search("Zurich");

@@ -17,70 +17,67 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <h1>
-          <img src="images/swissflag.jpg" alt="" width="100" /> Swiss Weather
-          Institute
-        </h1>
+        <div class="data-box">
+          <h1>
+            <img src="images/swissflag.jpg" alt="" width="100" /> Swiss Weather
+            Institute
+          </h1>
 
-        <form id="search-form">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  placeholder="Enter your City"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="text-input"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary"
+                  id="search-button"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Current"
+                  class="form-control btn btn-info"
+                  id="current-location"
+                />
+              </div>
+            </div>
+          </form>
+
           <div class="row">
-            <div class="col-8">
-              <input
-                type="text"
-                placeholder="Enter your City"
-                autocomplete="off"
-                autofocus="on"
-                id="text-input"
-                class="form-control"
-              />
+            <div class="col-3">
+              <div class="place">Zurich<br /></div>
+              <div class="update">Last updated:<br /></div>
+              <div class="date"></div>
+              <div class="weather"></div>
             </div>
             <div class="col-2">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary"
-                id="search-button"
-              />
+              <div class="actualweather"><img src="" alt="" id="icon" /></div>
             </div>
-            <div class="col-2">
-              <input
-                type="submit"
-                value="Current"
-                class="form-control btn btn-info"
-                id="current-location"
-              />
+            <div class="col-1">
+              <div class="degree">7</div>
+            </div>
+            <div class="col-2"><div class="celsius">C°</div></div>
+            <div class="col-4">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="speed"></span> km/h</li>
+              </ul>
             </div>
           </div>
-        </form>
 
-        <div class="row">
-          <div class="col-3">
-            <div class="place">Zurich<br /></div>
-            <div class="update">Last updated:<br /></div>
-            <div class="date"></div>
-            <div class="weather"></div>
-          </div>
-          <div class="col-2">
-            <div class="actualweather"><img src="" alt="" id="icon" /></div>
-          </div>
-          <div class="col-1">
-            <div class="degree">7</div>
-          </div>
-          <div class="col-1">
-            <a href="#" id="celsius-link" class="active">C° |</a>
-          </div>
-          <div class="col-1">
-            <a href="#" id="fahrenheit-link">F°</a>
-          </div>
-          <div class="col-4">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="speed"></span> km/h</li>
-            </ul>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-
-        <div class="weather-forecast" id="forecast"></div>
       </div>
 
       <p class="footer">
